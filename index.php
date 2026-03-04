@@ -10,6 +10,7 @@ $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
 
 <head>
   <?php include 'src/master/links.php'; ?>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@ $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
 
   <section class="banner">
     <div class="container">
-      <div class="row h-[800px] flex items-end">
+      <div class="row lg:h-[800px] h-[380px] flex items-end">
         <div class="banner-content w-full text-white text-left">
           <h1 class="ml5 banner-title lg:text-[140px]/[200px] text-[70px]/[60px]">
             <span class="text-wrapper">
@@ -29,8 +30,9 @@ $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
             </span>
           </h1>
           <div class="xl:flex justify-between lg:mt-5 items-baseline">
-            <p class="text-[36px] reveal-text">Deep expertise, decisive courtroom presence</p>
-            <p class="text-[18px] reveal-text">We've been serving the Los Angeles area with <br>expert legal counsel
+            <p class="lg:text-[36px] text-[24px] reveal-text">Deep expertise, decisive courtroom presence</p>
+            <p class="lg:text-[18px] text-[14px] reveal-text">We've been serving the Los Angeles area with <br>expert
+              legal counsel
               since 1976.</p>
           </div>
         </div>
