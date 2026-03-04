@@ -5,8 +5,125 @@
 
 body {
     font-family: 'Geist';
+    scroll-behavior: smooth;
 }
 
 .container {
     margin: 0 auto;
+}
+
+.banner {
+    background-image: url('src/assets/img/header-section.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Moving Letters - Signal & Noise */
+.ml5 {
+    position: relative;
+    font-weight: 300;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+@media (min-width: 375px) {
+    .ml5 {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 425px) {
+    .ml5 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        background-image: url('src/assets/img/mobile-hero-banner.png');
+        height: 400px;
+        background-attachment: scroll;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .ml5 {
+        font-size: 78px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ml5 {
+        font-size: 104px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .ml5 {
+        font-size: 158px;
+    }
+}
+
+.ml5 .letters-container {
+    display: block;
+    /* Force line break on mobile */
+}
+
+@media (min-width: 1024px) {
+    .ml5 .letters-container {
+        display: inline-block;
+        /* Back to single line on desktop */
+    }
+}
+
+.ml5 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.2em;
+    line-height: 1.1em;
+}
+
+.ml5 .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    transform-origin: 0.5 0;
+}
+
+/* Reveal Text Effect */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.reveal-text.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ml5 .ampersand {
+    font-family: Baskerville, serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 1em;
+    margin-right: -0.1em;
+    margin-left: -0.1em;
+}
+
+.ml5 .letters {
+    display: inline-block;
+    opacity: 0;
 }
