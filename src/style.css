@@ -15,7 +15,7 @@ body {
 }
 
 .banner {
-    background-image: url('/assets/img/header-section.png');
+    background-image: url('public/assets/img/header-section.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -45,7 +45,7 @@ body {
 
 @media (max-width: 767px) {
     .banner {
-        background-image: url('./assets/img/mobile-hero-banner.png');
+        background-image: url('public/assets/img/mobile-hero-banner.png');
         height: 400px;
         background-attachment: scroll;
     }
