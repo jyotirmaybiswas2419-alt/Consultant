@@ -13,7 +13,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <ul class="text-white inline-flex gap-5 lg:gap-10 text-sm font-medium">
                     <li>
                         <a href="<?php echo $base; ?>/services.php"
-                            class="<?= $currentPage === 'services.php' ? 'underline underline-offset-4' : 'hover:underline hover:underline-offset-4 transition-all' ?>">
+                            class="<?= $currentPage === 'services.php' ? 'underline underline-offset-4' : 'hover:underline hover:underline-offset-4 transition-all ease-in-out' ?>">
                             Services
                         </a>
                     </li>
