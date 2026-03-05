@@ -1,5 +1,5 @@
 <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="<?php echo $base; ?>/src/assets/img/logo.png" />
+<link rel="icon" type="image/png" href="http://localhost:5173/src/assets/img/logo.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Jones &amp; Brown Legal — Los Angeles Law Firm</title>
 <meta name="description"

@@ -23,8 +23,8 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
   <section class="banner">
     <div class="container">
-      <div class="row lg:h-[800px] h-[380px] flex items-end">
-        <div class="banner-content w-full text-white text-left">
+      <div class="row lg:h-[700px] md:h-[600px] h-[350px] flex items-end">
+        <div class="banner-content h-[220px] flex flex-col justify-between w-full text-white text-left">
           <h1 class="ml5 banner-title lg:text-[140px]/[200px] text-[70px]/[60px]">
             <span class="text-wrapper">
               <span class="line line1"></span>
@@ -34,11 +34,12 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
               <span class="line line2"></span>
             </span>
           </h1>
-          <div class="xl:flex justify-between lg:mt-5 items-baseline">
-            <p class="lg:text-[36px] text-[24px] reveal-text">Deep expertise, decisive courtroom presence</p>
-            <p class="lg:text-[18px] text-[14px] reveal-text">We've been serving the Los Angeles area with <br>expert
-              legal counsel
-              since 1976.</p>
+          <div class="xl:flex justify-between lg:mt-5 items-end">
+            <p class="lg:text-[36px]/[40px] md:text-[32px]/[35px] text-[22px]/[20px] reveal-text  my-5 w-full">Deep
+              expertise, decisive courtroom presence
+            </p>
+            <p class="lg:text-[18px] md:text-[16px] text-[14px]/[20px] md:w-1/2 reveal-text lg:w-1/2">We've been serving
+              the Los Angeles area with expert legal counsel since 1976.</p>
           </div>
         </div>
       </div>
