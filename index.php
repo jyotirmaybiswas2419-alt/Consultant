@@ -1,16 +1,21 @@
 <?php
+$isProduction = !file_exists(__DIR__ . '/node_modules/.vite') && !isset($_SERVER['HTTP_X_VITE_DEV']);
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
-// If accessing via localhost, Vite still needs the actual IP for HMR to work on other devices, 
-// but for the script tags, we can just use the current hostname (IP).
 $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
+// Derive the web root-relative base path (e.g. /consultant) so assets resolve correctly in subdirectory setups
+$base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
   <?php include 'src/master/links.php'; ?>
-  <link rel="stylesheet" href="/src/style.css">
+  <?php if (!$isProduction): ?>
+    <link rel="stylesheet" href="<?php echo $dev_server; ?>/src/style.css">
+  <?php else: ?>
+    <link rel="stylesheet" href="<?php echo $base; ?>/dist/assets/style.css">
+  <?php endif; ?>
 </head>
 
 <body>
@@ -40,9 +45,13 @@ $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
     </div>
   </section>
 
+  <?php include 'src/master/footer.php'; ?>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script type="module" src="<?php echo $dev_server; ?>/src/main.js"></script>
+  <?php if (!$isProduction): ?>
+    <script type="module" src="<?php echo $dev_server; ?>/src/main.js"></script>
+  <?php else: ?>
+    <script type="module" src="<?php echo $base; ?>/dist/assets/main.js"></script>
+  <?php endif; ?>
 </body>
 
 </html>
