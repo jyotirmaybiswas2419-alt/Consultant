@@ -31,65 +31,6 @@ body {
     color: #ffffff;
 }
 
-@media (min-width: 375px) {
-    .ml5 {
-        font-size: 32px;
-    }
-}
-
-@media (min-width: 425px) {
-    .ml5 {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 767px) {
-    .banner {
-        background-image: url('http://localhost:5173/src/assets/img/mobile-hero-banner.png');
-        height: 400px;
-        background-attachment: scroll;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .ml5 {
-        font-size: 74px;
-    }
-
-    .banner {
-        height: 80vh;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    .ml5 {
-        font-size: 100px;
-    }
-
-    .banner {
-        height: 100vh;
-    }
-}
-
-@media (min-width: 1440px) {
-    .ml5 {
-        font-size: 138px;
-    }
-}
-
-.ml5 .letters-container {
-    display: block;
-    /* Force line break on mobile */
-}
-
-@media (min-width: 1024px) {
-    .ml5 .letters-container {
-        display: inline-block;
-        /* Back to single line on desktop */
-    }
-}
 
 .ml5 .text-wrapper {
     position: relative;
@@ -240,6 +181,26 @@ body {
     transition-delay: 0.5s;
 }
 
+.reveal-text:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.reveal-text:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.reveal-text:nth-child(8) {
+    transition-delay: 0.8s;
+}
+
+.reveal-text:nth-child(9) {
+    transition-delay: 0.9s;
+}
+
+.reveal-text:nth-child(10) {
+    transition-delay: 1.0s;
+}
+
 /* ── Banner specific timing (wait for 'Jones & Brown' to finish) ── */
 .banner .reveal-text {
     transition-delay: 1.4s;
@@ -279,4 +240,148 @@ body {
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
     display: none;
+}
+
+.schedule-btn {
+    background-color: #31110F;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    border: 1px solid #31110F;
+    font-weight: 500;
+}
+
+.schedule-btn:hover {
+    background-color: transparent;
+    color: #31110F;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(49, 17, 15, 0.2);
+}
+
+.schedule-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(49, 17, 15, 0.1);
+}
+
+.Image-breaker-section {
+    background-image: url('http://localhost:5173/src/assets/img/image-breaker-section.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Image-divider-section-2 {
+    background-image: url('http://localhost:5173/src/assets/img/image-divider-section-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.view-btn {
+    background-color: #fff;
+    font-size: 16px;
+    color: #31110F;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    border: 1px solid #31110F;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 50px;
+}
+
+.view-btn:hover {
+    background-color: #31110F;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(49, 17, 15, 0.4);
+}
+
+.view-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(49, 17, 15, 0.2);
+}
+
+
+
+@media (min-width: 375px) {
+    .ml5 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 425px) {
+    .ml5 {
+        font-size: 38px;
+    }
+
+    .Image-breaker-section {
+        height: 280px;
+    }
+
+    .Image-divider-section-2 {
+        height: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        background-image: url('http://localhost:5173/src/assets/img/mobile-hero-banner.png');
+        height: 400px;
+        background-attachment: scroll;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .ml5 {
+        font-size: 74px;
+    }
+
+    .banner {
+        height: 80vh;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .ml5 {
+        font-size: 100px;
+    }
+
+    .banner {
+        height: 100vh;
+    }
+
+    .Image-breaker-section {
+        height: 625px;
+    }
+
+    .Image-divider-section-2 {
+        height: 625px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .ml5 {
+        font-size: 138px;
+    }
+}
+
+.ml5 .letters-container {
+    display: block;
+    /* Force line break on mobile */
+}
+
+@media (min-width: 1024px) {
+    .ml5 .letters-container {
+        display: inline-block;
+        /* Back to single line on desktop */
+    }
 }

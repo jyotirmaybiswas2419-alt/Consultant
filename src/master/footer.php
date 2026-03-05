@@ -12,12 +12,12 @@
             </div>
         </div>
         <div class="row md:my-20 my-10">
-            <p class="md:text-[22px]/[25px] text-[16px]/[18px] reveal-text">Deep expertise, decisive courtroom presence
+            <p class="md:text-[28px]/[25px] text-[16px]/[18px] reveal-text">Deep expertise, decisive courtroom presence
             </p>
         </div>
         <div class="row flex flex-col md:flex-row lg:gap-50 md:gap-30 gap-5">
             <nav>
-                <ul class="flex flex-col  text-sm font-medium">
+                <ul class="flex flex-col  text-sm font-medium text-[18px] ">
                     <li class="reveal-text"><a href="mailto:[jyotirmaybiswas2419@gmail.com]"
                             class="hover:underline hover:underline-offset-4 transition-all ">jyotirmaybiswas2419@gmail.com</a>
                     </li>
@@ -27,14 +27,14 @@
                 </ul>
             </nav>
             <nav>
-                <ul class="flex flex-col  text-sm font-medium">
+                <ul class="flex flex-col  text-sm font-medium text-[18px] ">
                     <li class="hover:underline hover:underline-offset-4 transition-all reveal-text ">Civil Lines</li>
                     <li class="hover:underline hover:underline-offset-4 transition-all reveal-text ">Delhi-110054</li>
                     <li class="hover:underline hover:underline-offset-4 transition-all reveal-text ">India</li>
                 </ul>
             </nav>
             <nav>
-                <ul class="flex flex-col  text-sm font-medium">
+                <ul class="flex flex-col  text-sm font-medium text-[18px] ">
                     <li class="reveal-text"><a href="https://www.instagram.com/jyotirmaybiswas106/?__pwa=1#"
                             class="hover:underline hover:underline-offset-4 transition-all  ">Instagram</a></li>
                     <li class="reveal-text"><a href="https://www.linkedin.com/in/jyotirmay-biswas-1b9b10368"
@@ -45,7 +45,7 @@
             </nav>
         </div>
         <div class="row md:mt-20 mt-10">
-            <p class="text-[14px] reveal-text">
+            <p class="text-[18px] reveal-text">
                 Jones &amp; Brown Legal.<br>
                 &copy; <?php echo date('Y'); ?> All rights reserved.
             </p>
