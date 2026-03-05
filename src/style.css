@@ -57,11 +57,19 @@ body {
         font-size: 74px;
     }
 
+    .banner {
+        height: 80vh;
+    }
+
 }
 
 @media (min-width: 1024px) {
     .ml5 {
         font-size: 100px;
+    }
+
+    .banner {
+        height: 100vh;
     }
 }
 
@@ -208,12 +216,36 @@ body {
     transition-property: opacity, transform, -webkit-clip-path, clip-path;
     transition-duration: 1.2s;
     transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-    transition-delay: 1.4s;
     will-change: opacity, transform;
 }
 
-/* Stagger the second paragraph using sibling selector instead for reliability */
-.reveal-text+.reveal-text {
+/* Base stagger for general lists/paragraphs (e.g. footer) */
+.reveal-text:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.reveal-text:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal-text:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.reveal-text:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.reveal-text:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+/* ── Banner specific timing (wait for 'Jones & Brown' to finish) ── */
+.banner .reveal-text {
+    transition-delay: 1.4s;
+}
+
+.banner .reveal-text+.reveal-text {
     transition-delay: 1.6s;
 }
 
@@ -242,4 +274,9 @@ body {
 /* Keep ampersand hidden until triggered */
 .ml5 .ampersand {
     opacity: 0;
+}
+
+/* Chrome, Edge, Opera */
+::-webkit-scrollbar {
+    display: none;
 }

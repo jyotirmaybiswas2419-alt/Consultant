@@ -11,8 +11,9 @@
                 <h2 class="lg:text-[60px] md:text-[40px] text-[24px] reveal-text ">Jones & Brown Legal</h2>
             </div>
         </div>
-        <div class="row my-20">
-            <p class="text-[22px]/[25px] reveal-text">Deep expertise, decisive courtroom presence</p>
+        <div class="row md:my-20 my-10">
+            <p class="md:text-[22px]/[25px] text-[16px]/[18px] reveal-text">Deep expertise, decisive courtroom presence
+            </p>
         </div>
         <div class="row flex flex-col md:flex-row lg:gap-50 md:gap-30 gap-5">
             <nav>

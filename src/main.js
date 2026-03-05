@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(bannerTitle);
     }
 
-    // 2. Reveal text on scroll
+    // 2. Reveal text on scroll - plays every time
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     entry.target.classList.add('is-revealed');
                 }, 50);
-                revealObserver.unobserve(entry.target);
+            } else {
+                // Remove the class when scrolled out of view to trigger again
+                entry.target.classList.remove('is-revealed');
             }
         });
-    }, { threshold: 0, rootMargin: "0px 0px -50px 0px" });
+    }, { threshold: 0, rootMargin: "0px" });
 
     document.querySelectorAll('.reveal-text').forEach(el => revealObserver.observe(el));
 });
