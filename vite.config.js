@@ -12,4 +12,17 @@ export default defineConfig({
         cors: true, // Enable CORS explicitly
         origin: '*',
     },
+    build: {
+        outDir: 'dist',
+        rollupOptions: {
+            input: {
+                main: 'src/main.js',
+                style: 'src/style.css'
+            },
+            output: {
+                entryFileNames: 'assets/[name].js',
+                assetFileNames: 'assets/[name].[ext]'
+            }
+        }
+    }
 })
