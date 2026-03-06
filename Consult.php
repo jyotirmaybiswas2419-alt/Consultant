@@ -1,9 +1,20 @@
 <?php
-$isProduction = getenv('VERCEL') == "1" || (!file_exists(__DIR__ . '/node_modules/.vite') && !isset($_SERVER['HTTP_X_VITE_DEV']));
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
 $dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
 $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+
+// Check if Vite dev server is running locally
+$vite_ip = explode(':', $host)[0];
+$vite_running = false;
+if (getenv('VERCEL') != "1") {
+    $conn = @fsockopen($vite_ip, 5173, $errno, $errstr, 0.1);
+    if ($conn) {
+        $vite_running = true;
+        fclose($conn);
+    }
+}
+$isProduction = getenv('VERCEL') == "1" || !$vite_running;
 
 $success = false;
 $errors = [];
