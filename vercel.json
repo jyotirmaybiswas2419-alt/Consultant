@@ -1,0 +1,9 @@
+{
+    "framework": null,
+    "buildCommand": "npm run build",
+    "functions": {
+        "*.php": {
+            "runtime": "vercel-php@0.6.2"
+        }
+    }
+}
