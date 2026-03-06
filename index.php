@@ -45,7 +45,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
       </div>
     </div>
   </section>
-  <section class="Welcome-section md:py-35 py-15">
+  <section class="Welcome-section lg:p-25 md:p-15 px-5 py-10 ">
     <div class="container">
       <div class="row md:pb-30 pb-15">
         <div class="ws-content">
@@ -76,7 +76,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
   <section class="Image-breaker-section mt-25">
   </section>
 
-  <section class="Offering-section bg-[#0D1F08] text-white lg:p-20 md:p-10 p-5 ">
+  <section class="Offering-section bg-[#0D1F08] text-white lg:p-25 md:p-15 px-5 py-10  ">
     <div class="container">
       <div class="row">
         <div class="os-content flex flex-col lg:flex-row lg:gap-50 md:gap-10 gap-3 items-baseline">
@@ -99,21 +99,88 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
     </div>
   </section>
 
-  <section class="Our-clients-section">
-
+  <section class="Our-clients-section lg:p-25 md:p-15 px-5 py-10 ">
+    <div class="container text-center">
+      <div class="row">
+        <div class="oc-heading">
+          <h2 class="font-medium lg:text-[32px] text-[24px] md:text-[28px]/[28px]">Hear From Our Clients</h2>
+          <p class="md:text-[18px] text-[18px]/[20px] lg:w-1/3 mx-auto md:my-10 my-5 reveal-text">We believe that our
+            clients'
+            experiences speak volumes about the quality of our legal services. Here's what some of them have to say:</p>
+        </div>
+      </div>
+      <div class="row bg-[#F6F6F6]  lg:px-20 md:py-10 md:px-15 p-5 lg:w-[900px] m-auto">
+        <div class="client-reviews reveal-text">
+          <div class="review slide-active">
+            <p>"Jones & Brown Legal handled my estate planning with such care and professionalism. They listened to my
+              concerns and made the process clear and straightforward. I now have complete peace of mind knowing my
+              family's future is secure." </p>
+            <div class="client-name my-10">
+              <p>— David Lawe., Business Owner</p>
+            </div>
+          </div>
+          <div class="review slide-hidden">
+            <p>"The team at Jones & Brown Legal is exceptional. They represented me in a complex business dispute and
+              achieved a favorable outcome that exceeded my expectations. Their expertise and dedication were evident
+              throughout the entire process." </p>
+            <div class="client-name my-10">
+              <p>— Sarah K., Real Estate Investor</p>
+            </div>
+          </div>
+          <div class="review slide-hidden">
+            <p>"I was facing a difficult employment situation and didn't know where to turn. The attorneys at Jones &
+              Brown Legal provided me with clear guidance and support. They fought for my rights and helped me reach a
+              fair resolution. I'm so grateful for their help." </p>
+            <div class="client-name my-10">
+              <p>— Michael R., Former Employee</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slider Navigation -->
+        <div class="slider-nav flex items-center justify-center gap-6 mt-15">
+          <button class="slider-prev hover:opacity-70 transition-opacity cursor-pointer" aria-label="Previous Review">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div class="slider-dots flex gap-3">
+            <button class="slider-dot w-3 h-3 rounded-full bg-[#31110F] transition-colors cursor-pointer" data-slide="0"
+              aria-label="Go to slide 1"></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"
+              data-slide="1" aria-label="Go to slide 2"></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"
+              data-slide="2" aria-label="Go to slide 3"></button>
+          </div>
+          <button class="slider-next hover:opacity-70 transition-opacity cursor-pointer" aria-label="Next Review">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="row py-10">
+        <div class="jhon-note lg:w-[35%] md:w-[75%] w-full mx-auto my-10 ">
+          <p class="reveal-text"> Let us help you navigate your legal journey with confidence and peace of mind. Contact
+            Jones & Brown Legal
+            today.</p>
+        </div>
+        <a href="Consult.php" class="schedule-btn mx-auto my-10" name="schedule">Schedule a Consult</a>
+      </div>
+    </div>
   </section>
   <section class="Image-divider-section-2 ">
   </section>
 
-
-
-
-
-
-
-
-
   <?php include 'src/master/footer.php'; ?>
+
+
+
   <?php if (!$isProduction): ?>
     <script type="module" src="<?php echo $dev_server; ?>/src/main.js">
     </script>

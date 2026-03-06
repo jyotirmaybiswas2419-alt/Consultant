@@ -32,4 +32,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0, rootMargin: "0px" });
 
     document.querySelectorAll('.reveal-text').forEach(el => revealObserver.observe(el));
+
+    // 3. Client Review Slider
+    const slides = document.querySelectorAll('.client-reviews .review');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+
+    if (slides.length > 0) {
+        let currentSlide = 0;
+
+        const updateSlider = (index) => {
+            // Hide all slides and reset dots
+            slides.forEach(slide => {
+                slide.classList.remove('slide-active');
+                slide.classList.add('slide-hidden');
+            });
+            dots.forEach(dot => {
+                dot.classList.remove('bg-[#31110F]');
+                dot.classList.add('bg-gray-300');
+            });
+
+            // Show current slide and activate proper dot
+            slides[index].classList.remove('slide-hidden');
+            slides[index].classList.add('slide-active');
+            dots[index].classList.remove('bg-gray-300');
+            dots[index].classList.add('bg-[#31110F]');
+            
+            currentSlide = index;
+        };
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                let prev = currentSlide - 1;
+                if (prev < 0) prev = slides.length - 1;
+                updateSlider(prev);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                let next = currentSlide + 1;
+                if (next >= slides.length) next = 0;
+                updateSlider(next);
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                updateSlider(idx);
+            });
+        });
+    }
 });

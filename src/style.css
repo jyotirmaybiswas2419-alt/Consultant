@@ -309,6 +309,8 @@ body {
 
 
 
+
+
 @media (min-width: 375px) {
     .ml5 {
         font-size: 32px;
@@ -327,6 +329,12 @@ body {
     .Image-divider-section-2 {
         height: 280px;
     }
+
+    .review {
+        font-size: 22px !important;
+        font-weight: 500;
+        line-height: normal;
+    }
 }
 
 @media (max-width: 767px) {
@@ -335,6 +343,8 @@ body {
         height: 400px;
         background-attachment: scroll;
     }
+
+
 
 }
 
@@ -366,6 +376,12 @@ body {
     .Image-divider-section-2 {
         height: 625px;
     }
+
+    .review {
+        font-size: 32px !important;
+        font-weight: 500;
+        line-height: normal;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -383,5 +399,27 @@ body {
     .ml5 .letters-container {
         display: inline-block;
         /* Back to single line on desktop */
+    }
+}
+
+/* Review Slider */
+.slide-active {
+    display: block;
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+.slide-hidden {
+    display: none;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -1,4 +1,4 @@
-<footer class=" py-10 mt-auto">
+<footer class=" lg:p-25 md:p-10  p-5 mt-auto">
     <div class="container">
         <div class="row">
             <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
@@ -15,7 +15,7 @@
             <p class="md:text-[28px]/[25px] text-[16px]/[18px] reveal-text">Deep expertise, decisive courtroom presence
             </p>
         </div>
-        <div class="row flex flex-col md:flex-row lg:gap-50 md:gap-30 gap-5">
+        <div class="row flex flex-col md:flex-row lg:gap-50 md:gap-20 gap-5">
             <nav>
                 <ul class="flex flex-col  text-sm font-medium text-[18px] ">
                     <li class="reveal-text"><a href="mailto:[jyotirmaybiswas2419@gmail.com]"
