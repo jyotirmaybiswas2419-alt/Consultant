@@ -1,20 +1,5 @@
 <?php
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
-$host = $_SERVER['HTTP_HOST'];
-$dev_server = "$protocol://" . explode(':', $host)[0] . ":5173";
 $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
-
-// Check if Vite dev server is running locally
-$vite_ip = explode(':', $host)[0];
-$vite_running = false;
-if (getenv('VERCEL') != "1") {
-    $conn = @fsockopen($vite_ip, 5173, $errno, $errstr, 0.1);
-    if ($conn) {
-        $vite_running = true;
-        fclose($conn);
-    }
-}
-$isProduction = getenv('VERCEL') == "1" || !$vite_running;
 
 $success = false;
 $errors = [];
@@ -44,11 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <?php include 'src/master/links.php'; ?>
-    <?php if (!$isProduction): ?>
-        <link rel="stylesheet" href="<?php echo $dev_server; ?>/src/style.css">
-    <?php else: ?>
-        <link rel="stylesheet" href="<?php echo $base; ?>/dist/assets/style.css">
-    <?php endif; ?>
+    <link rel="stylesheet" href="<?php echo $base; ?>/dist/assets/style.css">
     <title>Schedule a Consult — Jones &amp; Brown Legal</title>
     <meta name="description"
         content="Request a consultation with Jones & Brown Legal. Our Los Angeles attorneys are ready to help you.">
@@ -148,11 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php include 'src/master/footer.php'; ?>
 
-    <?php if (!$isProduction): ?>
-        <script type="module" src="<?php echo $dev_server; ?>/src/main.js"></script>
-    <?php else: ?>
-        <script type="module" src="<?php echo $base; ?>/dist/assets/main.js"></script>
-    <?php endif; ?>
+    <script type="module" src="<?php echo $base; ?>/dist/assets/main.js"></script>
 </body>
 
 </html>

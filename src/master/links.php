@@ -10,6 +10,3 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jones & Brown Legal">
 <meta name="twitter:description" content="Deep expertise, decisive courtroom presence. Serving Los Angeles since 1976.">
-<?php if (!$isProduction): ?>
-    <script type="module" src="<?php echo $dev_server; ?>/@vite/client"></script>
-<?php endif; ?>

@@ -15,7 +15,7 @@ body {
 }
 
 .banner {
-    background-image: url('http://localhost:5173/src/assets/img/header-section.png');
+    background-image: url('assets/img/header-section.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -267,14 +267,14 @@ body {
 }
 
 .Image-breaker-section {
-    background-image: url('http://localhost:5173/src/assets/img/image-breaker-section.png');
+    background-image: url('assets/img/image-breaker-section.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .Image-divider-section-2 {
-    background-image: url('http://localhost:5173/src/assets/img/image-divider-section-2.png');
+    background-image: url('assets/img/image-divider-section-2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -339,7 +339,7 @@ body {
 
 @media (max-width: 767px) {
     .banner {
-        background-image: url('http://localhost:5173/src/assets/img/mobile-hero-banner.png');
+        background-image: url('assets/img/mobile-hero-banner.png');
         height: 400px;
         background-attachment: scroll;
     }
