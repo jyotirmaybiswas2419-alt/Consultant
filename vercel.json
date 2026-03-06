@@ -14,5 +14,19 @@
             "src": "dist/**",
             "use": "@vercel/static"
         }
+    ],
+    "routes": [
+        {
+            "src": "/dist/(.*)",
+            "dest": "/dist/$1"
+        },
+        {
+            "src": "/src/(.*)",
+            "dest": "/src/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
     ]
 }
