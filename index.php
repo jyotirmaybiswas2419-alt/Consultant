@@ -23,7 +23,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
   <section class="banner">
     <div class="container">
-      <div class="row lg:h-[1000px] md:h-[600px] h-[350px] flex items-end">
+      <div class="row lg:h-[700px] md:h-[600px] h-[350px] flex items-end">
         <div class="banner-content h-[220px] flex flex-col justify-between w-full text-white text-left">
           <h1 class="ml5 banner-title lg:text-[140px]/[200px] text-[70px]/[60px]">
             <span class="text-wrapper">
