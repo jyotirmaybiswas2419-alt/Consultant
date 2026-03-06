@@ -6,7 +6,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <div class="row flex justify-between items-center">
             <div class="logo">
                 <a href="<?php echo $base; ?>/index.php">
-                    <img src="<?php echo $base; ?>/src/assets/img/logo.png" alt="Jones & Brown Legal logo">
+                    <img src="/src/assets/img/logo.png" alt="Jones & Brown Legal logo">
                 </a>
             </div>
             <div class="menu">

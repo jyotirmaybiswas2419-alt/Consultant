@@ -4,8 +4,7 @@
             <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
                 <div class="logo">
                     <a href="<?php echo $base; ?>/index.php">
-                        <img src="<?php echo $base; ?>/src/assets/img/dark-logo.png" width="50px"
-                            alt="Jones & Brown Legal logo">
+                        <img src="src/assets/img/dark-logo.png" width="50px" alt="Jones & Brown Legal logo">
                     </a>
                 </div>
                 <h2 class="lg:text-[60px] md:text-[40px] text-[24px] reveal-text ">Jones & Brown Legal</h2>
