@@ -307,8 +307,21 @@ body {
     box-shadow: 0 4px 10px rgba(49, 17, 15, 0.2);
 }
 
+.service-banner {
+    background-image: url('assets/img/service.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 725px;
+}
 
+.experience-number {
+    font-size: 120px;
+}
 
+.experience-text {
+    font-size: 24px;
+}
 
 
 @media (min-width: 375px) {
@@ -342,6 +355,11 @@ body {
         background-image: url('assets/img/mobile-hero-banner.png');
         height: 400px;
         background-attachment: scroll;
+    }
+
+    .service-banner {
+        background-image: url('assets/img/service-mobile.png');
+        height: 500px;
     }
 
 

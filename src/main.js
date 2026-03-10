@@ -16,22 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(bannerTitle);
     }
 
-    // 2. Reveal text on scroll - plays every time
+    // 2. Reveal text on scroll - all siblings reveal together when first is visible
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const items = entry.target.querySelectorAll('.reveal-text');
             if (entry.isIntersecting) {
-                // Small timeout ensures the initial 0 opacity state is painted first
-                setTimeout(() => {
-                    entry.target.classList.add('is-revealed');
-                }, 50);
+                items.forEach(el => {
+                    setTimeout(() => el.classList.add('is-revealed'), 50);
+                });
             } else {
-                // Remove the class when scrolled out of view to trigger again
-                entry.target.classList.remove('is-revealed');
+                items.forEach(el => el.classList.remove('is-revealed'));
             }
         });
     }, { threshold: 0, rootMargin: "0px" });
 
-    document.querySelectorAll('.reveal-text').forEach(el => revealObserver.observe(el));
+    // Observe each unique parent that contains reveal-text elements
+    document.querySelectorAll('.reveal-text').forEach(el => {
+        revealObserver.observe(el.parentElement);
+    });
 
     // 3. Client Review Slider
     const slides = document.querySelectorAll('.client-reviews .review');
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[index].classList.add('slide-active');
             dots[index].classList.remove('bg-gray-300');
             dots[index].classList.add('bg-[#31110F]');
-            
+
             currentSlide = index;
         };
 
@@ -82,4 +84,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 4. Count-up animation for stats
+    const countUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.querySelectorAll('.count-up').forEach(el => {
+                const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || '';
+                const duration = 1500; // ms
+                const start = performance.now();
+
+                const tick = (now) => {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // ease out
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.floor(eased * target) + suffix;
+                    if (progress < 1) requestAnimationFrame(tick);
+                };
+
+                requestAnimationFrame(tick);
+            });
+
+            countUpObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.3 });
+
+    const statsSection = document.querySelector('.Stats-section');
+    if (statsSection) countUpObserver.observe(statsSection);
 });
