@@ -54,7 +54,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
         <section class="Our-services-section mt-10 bg-[#0D1F08] text-white">
             <div class="container md:p-15 px-5 py-15">
-                <div class="row">
+                <div class="row reveal-text">
                     <p class="lg:text-[32px] md:text-[28px] text-[24px]">Navigating Complex
                         Legal Landscapes? </p>
                     <p class="lg:text-[32px] md:text-[28px] text-[24px]">We Can Help.</p>
@@ -62,7 +62,8 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                 <div class="row pt-10 lg:mt-30">
                     <div class="">
                         <div class="our-serives mt-20 grid md:grid-cols-2 lg:block gap-5">
-                            <div class="Business-Corporate-Law flex xl:flex-row flex-col gap-5 md border-t py-10">
+                            <div
+                                class="Business-Corporate-Law flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Business and Corporate Law</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">Business formation (LLCs,
                                     corporations,
@@ -75,7 +76,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                                     Shareholder and partnership disputes.</p>
                             </div>
                             <div
-                                class="Litigation-Dispute-Resolution flex xl:flex-row flex-col gap-5 md border-t py-10">
+                                class="Litigation-Dispute-Resolution flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Litigation and Dispute
                                     Resolution</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">Civil litigation</br>
@@ -85,7 +86,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                                     Personal injury claims</br>
                                     Product liability cases.</p>
                             </div>
-                            <div class="Family-Law flex xl:flex-row flex-col gap-5 md border-t py-10">
+                            <div class="Family-Law flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Family Law</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">Divorce and separation</br>
                                     Child custody and support</br>
@@ -93,7 +94,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                                     Adoption and surrogacy</br>
                                     Domestic violence protection</p>
                             </div>
-                            <div class="Criminal-Defense flex xl:flex-row flex-col gap-5 md border-t py-10">
+                            <div class="Criminal-Defense flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Criminal Defense</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">DUI and traffic offenses</br>
                                     White-collar crime defense</br>
@@ -101,7 +102,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                                     Assault and battery cases</br>
                                     Expungements and record sealing</p>
                             </div>
-                            <div class="Real-Estate-Law flex xl:flex-row flex-col gap-5 md border-t py-10">
+                            <div class="Real-Estate-Law flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Real Estate Law</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">Property transactions (buying,
                                     selling, leasing)</br>
@@ -110,7 +111,7 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                                     Construction law</br>
                                     Real estate development</p>
                             </div>
-                            <div class="Immigration-Law flex xl:flex-row flex-col gap-5 md border-t py-10">
+                            <div class="Immigration-Law flex xl:flex-row flex-col gap-5 md border-t py-10 reveal-text">
                                 <p class="serives-title text-[22px] font-medium w-full ">Immigration Law</p>
                                 <p class="serives-description text-[18px] lg:w-[60%] ">Visa applications</br>
                                     Green cards and citizenship</br>
@@ -127,8 +128,9 @@ $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
         <section class="py-20">
             <div class="container  md:p-15 px-5 py-5">
-                <h1 class="text-[48px] font-light text-[#0d1f08] mb-6">Our Services</h1>
-                <p class="text-[18px] text-gray-600 mb-12 max-w-2xl">We provide comprehensive legal representation
+                <h1 class="text-[48px] font-light text-[#0d1f08] mb-6 reveal-text">Our Services</h1>
+                <p class="text-[18px] text-gray-600 mb-12 max-w-2xl reveal-text">We provide comprehensive legal
+                    representation
                     across a wide range of practice areas. Our experienced attorneys are dedicated to protecting your
                     rights and achieving the best possible outcome.</p>
 
