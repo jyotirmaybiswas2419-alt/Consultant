@@ -311,8 +311,9 @@ body {
     background-image: url('assets/img/service.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 725px;
+    height: 825px;
 }
 
 .experience-number {
@@ -323,6 +324,14 @@ body {
     font-size: 24px;
 }
 
+.service-section-breaker {
+    background-image: url('assets/img/service-section-breaker.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 625px;
+}
 
 @media (min-width: 375px) {
     .ml5 {
@@ -348,6 +357,7 @@ body {
         font-weight: 500;
         line-height: normal;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -360,6 +370,10 @@ body {
     .service-banner {
         background-image: url('assets/img/service-mobile.png');
         height: 500px;
+    }
+
+    .service-section-breaker {
+        height: 400px;
     }
 
 
@@ -399,6 +413,10 @@ body {
         font-size: 32px !important;
         font-weight: 500;
         line-height: normal;
+    }
+
+    .service-section-breaker {
+        height: 480px;
     }
 }
 
